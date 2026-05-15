@@ -24,9 +24,13 @@ public class Main {
 
             String dominio = email.substring(posicaoArroba + 1);
 
-            System.out.println("E-mail válido!");
-            System.out.println("Usuário: " + usuario);
-            System.out.println("Domínio: " + dominio);
+            StringBuilder relatorio = new StringBuilder();
+
+            relatorio.append("E-mail válido!\n");
+            relatorio.append("Usuário: ").append(usuario).append("\n");
+            relatorio.append("Domínio: ").append(dominio);
+
+            System.out.println(relatorio);
         }
     }
 }
