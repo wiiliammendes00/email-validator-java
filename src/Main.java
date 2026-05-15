@@ -6,12 +6,16 @@ public class Main {
 
         System.out.println("E-mail informado: " + email);
 
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+
         if (email.isBlank()) {
+
             System.out.println("E-mail inválido!");
-        } else if (!email.contains("@")) {
-            System.out.println("E-mail precisa conter @");
-        } else if (!email.contains(".com")) {
-            System.out.println("E-mail precisa conter .com");
+
+        } else if (!email.matches(regex)) {
+
+            System.out.println("Formato de e-mail inválido!");
+
         } else {
 
             int posicaoArroba = email.indexOf("@");
